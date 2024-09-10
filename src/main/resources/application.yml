@@ -1,0 +1,24 @@
+spring:
+    #数据库连接信息
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/work
+        username: root
+        password: lty249307522
+    #文件上传配置
+    servlet:
+        multipart:
+            max-file-size: 100MB
+            max-request-size: 100MB
+    web:
+        resources:
+            static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
+#Mybatis配置
+mybatis:
+    configuration:
+        log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+        map-underscore-to-camel-case: true
+#spring事务管理日志
+logging:
+    level:
+        org.springframework.jdbc.support.JdbcTransactionManager: debug
