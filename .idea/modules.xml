@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/springweb.iml" filepath="$PROJECT_DIR$/springweb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/stu-room-system.iml" filepath="$PROJECT_DIR$/.idea/stu-room-system.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springweb/stu_room_sys.iml" filepath="$PROJECT_DIR$/springweb/stu_room_sys.iml" />
     </modules>
   </component>
 </project>
