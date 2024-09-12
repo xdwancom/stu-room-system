@@ -1,0 +1,7 @@
+com\springweb4\service\stuService.class
+com\springweb4\pojo\Stu.class
+com\springweb4\mapper\stuMapper.class
+com\springweb4\pojo\Result.class
+com\springweb4\service\impl\stuServiceImpl.class
+com\springweb4\controller\stuController.class
+com\springweb4\Springweb4Application.class

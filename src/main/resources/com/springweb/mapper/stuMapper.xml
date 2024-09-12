@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.springweb.mapper.stuMapper">
+    <!--批量删除学生 (1, 2, 3)-->
+    <delete id="deleteid">
+        delete
+        from stu
+        where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+
+    <!--条件查询-->
+    <select id="search" resultType="com.springweb.pojo.Stu">
+        select *
+        from stu a
+        <where>
+            <if test="unit != null and unit != ''">
+                unit = #{unit}
+            </if>
+            <if test="roomid != null and roomid != ''">
+                and roomid = #{roomid}
+            </if>
+            <if test="name != null and name != ''">
+                and name like concat('%',#{name},'%')
+            </if>
+            <if test="gender != null and gender != ''">
+                and gender = #{gender}
+            </if>
+            <if test="id != null and id != ''">
+                and id = #{id}
+            </if>
+            <if test="department != null and department != ''">
+                and department = #{department}
+            </if>
+            <if test="grade != null and grade != ''">
+                and grade = #{grade}
+            </if>
+        </where>
+        order by roomid
+    </select>
+</mapper>
