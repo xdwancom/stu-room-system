@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface accountMapper {
-    @Select("select count(*) from account where username = #{username} and password = #{password} limit 1")//加上limit 1查到一条则停止
+    @Select("SELECT EXISTS (SELECT 1 FROM account WHERE username = #{username} AND password = #{password})")
     boolean login(Account account);
 }
