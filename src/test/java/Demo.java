@@ -1,5 +1,3 @@
-package com.itheima;
-
 import io.jsonwebtoken.*;
 import org.junit.jupiter.api.Test;
 
