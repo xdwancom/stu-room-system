@@ -4,30 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="更新">
-      <change afterPath="$PROJECT_DIR$/sys-parent/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Account.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/OperateLog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Pagebean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Stu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sys-utils/pom.xml" afterDir="false" />
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="maven分模块设计">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/controller/stuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/controller/stuController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Account.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/OperateLog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Pagebean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Result.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Room.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Stu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/utils/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/sys-utils/src/main/java/com/springweb/utils/JwtUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sys-parent/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -339,7 +321,7 @@
       <workItem from="1726377859685" duration="2028000" />
       <workItem from="1726381178435" duration="160000" />
       <workItem from="1726381353349" duration="1636000" />
-      <workItem from="1726383002632" duration="1692000" />
+      <workItem from="1726383002632" duration="3128000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -453,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726148052392</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="maven分模块设计">
+      <created>1726385020746</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726385020746</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,7 +498,8 @@
     <MESSAGE value="优化sql语句" />
     <MESSAGE value="更新gitignore" />
     <MESSAGE value="更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新" />
+    <MESSAGE value="maven分模块设计" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven分模块设计" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -5,7 +5,6 @@
       <module fileurl="file://$PROJECT_DIR$/springweb.iml" filepath="$PROJECT_DIR$/springweb.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-parent/sys-parent.iml" filepath="$PROJECT_DIR$/sys-parent/sys-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/sys-pojo/sys-pojo.iml" filepath="$PROJECT_DIR$/sys-pojo/sys-pojo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sys-utils/sys-utils.iml" filepath="$PROJECT_DIR$/sys-utils/sys-utils.iml" />
     </modules>
   </component>
 </project>
