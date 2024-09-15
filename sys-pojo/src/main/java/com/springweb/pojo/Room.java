@@ -1,7 +1,7 @@
 package com.springweb.pojo;
 
-import lombok.Data;
 import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
