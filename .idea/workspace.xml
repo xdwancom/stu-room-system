@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="maven分模块设计">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="maven版本锁定-统一管理">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sys-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sys-parent/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -321,7 +318,7 @@
       <workItem from="1726377859685" duration="2028000" />
       <workItem from="1726381178435" duration="160000" />
       <workItem from="1726381353349" duration="1636000" />
-      <workItem from="1726383002632" duration="3128000" />
+      <workItem from="1726383002632" duration="4245000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -442,7 +439,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726385020746</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="maven版本锁定-统一管理">
+      <created>1726386246073</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726386246073</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -499,7 +503,8 @@
     <MESSAGE value="更新gitignore" />
     <MESSAGE value="更新" />
     <MESSAGE value="maven分模块设计" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven分模块设计" />
+    <MESSAGE value="maven版本锁定-统一管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven版本锁定-统一管理" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

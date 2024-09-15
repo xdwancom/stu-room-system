@@ -7,6 +7,7 @@
     <!--聚合其他模块-->
     <modules>
         <module>../sys-pojo</module>
+        <module>../../springweb</module>
     </modules>
 
     <parent>
