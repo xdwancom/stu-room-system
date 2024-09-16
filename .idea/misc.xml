@@ -6,7 +6,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/sys-parent/pom.xml" />
         <option value="$PROJECT_DIR$/../sys-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/sys-pojo/pom.xml" />
         <option value="$PROJECT_DIR$/sys-utils/pom.xml" />
       </list>
     </option>

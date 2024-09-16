@@ -4,9 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="maven版本锁定-统一管理">
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="maven聚合">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sys-parent/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/sys-parent/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/interceptor/LoginCheckInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/interceptor/LoginCheckInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-parent/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Account.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/OperateLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/OperateLog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Pagebean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Pagebean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sys-pojo/src/main/java/com/springweb/pojo/Stu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Stu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,7 +331,8 @@
       <workItem from="1726377859685" duration="2028000" />
       <workItem from="1726381178435" duration="160000" />
       <workItem from="1726381353349" duration="1636000" />
-      <workItem from="1726383002632" duration="4245000" />
+      <workItem from="1726383002632" duration="4581000" />
+      <workItem from="1726465742102" duration="1132000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -446,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726386246073</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="maven聚合">
+      <created>1726388073917</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726388073917</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -504,7 +525,8 @@
     <MESSAGE value="更新" />
     <MESSAGE value="maven分模块设计" />
     <MESSAGE value="maven版本锁定-统一管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="maven版本锁定-统一管理" />
+    <MESSAGE value="maven聚合" />
+    <option name="LAST_COMMIT_MESSAGE" value="maven聚合" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

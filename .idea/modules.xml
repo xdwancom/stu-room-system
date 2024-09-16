@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springweb.iml" filepath="$PROJECT_DIR$/springweb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sys-parent/sys-parent.iml" filepath="$PROJECT_DIR$/sys-parent/sys-parent.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sys-pojo/sys-pojo.iml" filepath="$PROJECT_DIR$/sys-pojo/sys-pojo.iml" />
     </modules>
   </component>
 </project>

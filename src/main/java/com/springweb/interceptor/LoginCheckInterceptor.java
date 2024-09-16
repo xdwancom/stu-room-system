@@ -21,7 +21,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor {
         log.info("请求的url:{}",url);//获取请求url，输出日志
         log.info("请求token:{}",req.getHeader("token"));
         String jwt = req.getHeader("token");//获取请求头中的token值（令牌）
-        if (true){return true;}
+//        if (true){return true;
+
         //2.判断请求url中是否包含login，如果包含，说明是登录操作，放行。
 //        if(url.contains("login")){
 //            log.info("登录操作, 放行...");
