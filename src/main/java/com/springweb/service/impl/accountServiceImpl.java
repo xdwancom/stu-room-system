@@ -1,4 +1,5 @@
 package com.springweb.service.impl;
+
 import com.springweb.mapper.accountMapper;
 import com.springweb.pojo.Account;
 import com.springweb.pojo.AccountDTO;
@@ -27,6 +28,9 @@ public class accountServiceImpl implements accountService {
     @Override
     public Result login(AccountDTO accountDTO) {
         Account account=accountMapper.getByUsername(accountDTO.getUsername());
+        if (account == null)
+            return Result.error("账号不存在");
+
         String password = DigestUtils.sha256Hex(accountDTO.getPassword()+account.getSalt());
         if (password.equals(account.getPassword())){
             Map<String, Object> claims = new HashMap<>();
@@ -36,7 +40,6 @@ public class accountServiceImpl implements accountService {
             String jwt = JwtUtils.generateJwt(claims); //jwt包含了当前登录的员工信息
             return Result.success(jwt);
         }
-        System.out.println("账号密码错误");
         return Result.error("账号密码错误");
     }
 }

@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="还原结构">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/AccountDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" afterDir="false" />
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="sha256">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/springweb/exception/MessageConstant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/controller/accountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/controller/accountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/accountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/accountMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Account.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Account.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/accountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/accountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +86,6 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
@@ -129,6 +121,7 @@
       <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.springweb.exception" />
       <recent name="com.springweb.pojo" />
       <recent name="com.springweb4.utils" />
       <recent name="com.springweb4.mapper" />
@@ -331,7 +324,7 @@
       <workItem from="1726465742102" duration="2043000" />
       <workItem from="1726468407478" duration="446000" />
       <workItem from="1726542318029" duration="21000" />
-      <workItem from="1726579802964" duration="3301000" />
+      <workItem from="1726579802964" duration="4252000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -473,7 +466,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726467158452</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="sha256">
+      <created>1726583388406</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1726583388406</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +533,8 @@
     <MESSAGE value="maven版本锁定-统一管理" />
     <MESSAGE value="maven聚合" />
     <MESSAGE value="还原结构" />
-    <option name="LAST_COMMIT_MESSAGE" value="还原结构" />
+    <MESSAGE value="sha256" />
+    <option name="LAST_COMMIT_MESSAGE" value="sha256" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
