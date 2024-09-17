@@ -8,6 +8,7 @@ import com.springweb.service.accountService;
 import com.springweb.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,7 +32,7 @@ public class accountServiceImpl implements accountService {
         if (account == null)
             return Result.error("账号不存在");
 
-        String password = DigestUtils.sha256Hex(accountDTO.getPassword()+account.getSalt());
+        String password = DigestUtils.sha256Hex(accountDTO.getPassword()+account.getSalt());//明文密码+盐值hash加密
         if (password.equals(account.getPassword())){
             Map<String, Object> claims = new HashMap<>();
             claims.put("username", account.getUsername());
@@ -41,5 +42,16 @@ public class accountServiceImpl implements accountService {
             return Result.success(jwt);
         }
         return Result.error("账号密码错误");
+    }
+
+    /**
+     * 注册
+     */
+    @Override
+    public Result register(AccountDTO accountDTO) {
+        String salt=RandomStringUtils.randomAlphanumeric(8);//随机生成8位字符串
+        String password = DigestUtils.sha256Hex(accountDTO.getPassword()+salt);//明文密码+盐值hash加密
+        accountMapper.insert(new Account(accountDTO.getUsername(),password,salt));
+        return Result.success();
     }
 }

@@ -27,4 +27,9 @@ public class accountController {
     public Result login(@RequestBody AccountDTO accountDTO){
         return accountService.login(accountDTO);
     }
+    //注册
+    @PostMapping("/register")
+    public Result register(@RequestBody AccountDTO accountDTO){
+        return accountService.register(accountDTO);
+    }
 }

@@ -9,4 +9,5 @@ import com.springweb.pojo.Result;
  */
 public interface accountService {
     Result login(AccountDTO account);
+    Result register(AccountDTO account);
 }
