@@ -51,7 +51,11 @@ public class accountServiceImpl implements accountService {
     public Result register(AccountDTO accountDTO) {
         String salt=RandomStringUtils.randomAlphanumeric(8);//随机生成8位字符串
         String password = DigestUtils.sha256Hex(accountDTO.getPassword()+salt);//明文密码+盐值hash加密
-        accountMapper.insert(new Account(accountDTO.getUsername(),password,salt));
+        try {
+            accountMapper.insert(new Account(accountDTO.getUsername(),password,salt));
+        }catch (Exception e){
+            return Result.error("用户已存在");
+        }
         return Result.success();
     }
 }
