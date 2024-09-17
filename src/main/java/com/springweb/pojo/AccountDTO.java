@@ -10,8 +10,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Account {
+public class AccountDTO {
     private String username; //用户名
     private String password; //密码
-    private String salt;
 }

@@ -1,10 +1,12 @@
 package com.springweb.service.impl;
 import com.springweb.mapper.accountMapper;
 import com.springweb.pojo.Account;
+import com.springweb.pojo.AccountDTO;
 import com.springweb.pojo.Result;
 import com.springweb.service.accountService;
 import com.springweb.utils.JwtUtils;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,8 +25,10 @@ public class accountServiceImpl implements accountService {
      * 登录
      */
     @Override
-    public Result login(Account account) {
-        if (accountMapper.login(account)){
+    public Result login(AccountDTO accountDTO) {
+        Account account=accountMapper.getByUsername(accountDTO.getUsername());
+        String password = DigestUtils.sha256Hex(accountDTO.getPassword()+account.getSalt());
+        if (password.equals(account.getPassword())){
             Map<String, Object> claims = new HashMap<>();
             claims.put("username", account.getUsername());
             claims.put("password", account.getPassword());

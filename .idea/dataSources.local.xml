@@ -11,7 +11,10 @@
       <user-name>root</user-name>
       <schema-mapping>
         <introspection-scope>
-          <node kind="schema" qname="work" />
+          <node kind="schema">
+            <name qname="sky_take_out" />
+            <name qname="work" />
+          </node>
         </introspection-scope>
       </schema-mapping>
     </data-source>

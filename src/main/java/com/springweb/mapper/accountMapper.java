@@ -6,6 +6,6 @@ import org.apache.ibatis.annotations.Select;
 
 @Mapper
 public interface accountMapper {
-    @Select("SELECT EXISTS (SELECT 1 FROM account WHERE username = #{username} AND password = #{password})")
-    boolean login(Account account);
+    @Select("SELECT * FROM account WHERE username = #{username}")
+    Account getByUsername(String username);
 }

@@ -1,12 +1,15 @@
 package com.springweb.controller;
 
 import com.springweb.annotation.Log;
-import com.springweb.pojo.Account;
+import com.springweb.pojo.AccountDTO;
 import com.springweb.pojo.Result;
 import com.springweb.service.accountService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * 登录信息Controller
@@ -21,7 +24,7 @@ public class accountController {
     private accountService accountService;
 
     @PostMapping("/login")
-    public Result login(@RequestBody Account account){
-        return accountService.login(account);
+    public Result login(@RequestBody AccountDTO accountDTO){
+        return accountService.login(accountDTO);
     }
 }
