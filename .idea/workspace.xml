@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="sha256">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/springweb/exception/MessageConstant.java" afterDir="false" />
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="细节优化">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/controller/accountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/controller/accountController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/accountMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/accountMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/accountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/accountService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -324,7 +327,7 @@
       <workItem from="1726465742102" duration="2043000" />
       <workItem from="1726468407478" duration="446000" />
       <workItem from="1726542318029" duration="21000" />
-      <workItem from="1726579802964" duration="4252000" />
+      <workItem from="1726579802964" duration="6244000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -473,7 +476,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726583388406</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="细节优化">
+      <created>1726584452724</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1726584452724</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -534,7 +544,8 @@
     <MESSAGE value="maven聚合" />
     <MESSAGE value="还原结构" />
     <MESSAGE value="sha256" />
-    <option name="LAST_COMMIT_MESSAGE" value="sha256" />
+    <MESSAGE value="细节优化" />
+    <option name="LAST_COMMIT_MESSAGE" value="细节优化" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
