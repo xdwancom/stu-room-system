@@ -8,8 +8,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import java.util.List;
 
+import java.util.List;
 
 /**
  * 学生管理Controller
@@ -20,26 +20,23 @@ import java.util.List;
 @RequestMapping("/stu")//处理指定请求
 @RestController//请求处理类,自动将方法返回值转换为json响应返回
 public class stuController {
-
     @Autowired//ioc容器管理，依赖注入
     private stuService stuService;
 
     /**
-     * 批量删除学生
+     * 根据id批量删除学生
      */
     @DeleteMapping("/ids/{ids}")
-    public Result deleteid(@PathVariable List<Integer> ids){
-        log.info("根据id批量删除学生:{}",ids);
-        stuService.deleteid(ids);
-        return Result.success();
+    public Result deletebyid(@PathVariable List<Integer> ids){
+        return stuService.removeByIds(ids)?Result.success():Result.error("删除失败");
     }
 
     /**
-     * 新增学生，post请求，body请求体，json格式
+     *id已存在则更新，无则新增学生，post请求，body请求体，json格式
      */
     @PostMapping
-    public Result add(@RequestBody Stu stu){
-        return stuService.add(stu);
+    public Result add_or_update(@RequestBody Stu stu){
+        return stuService.add_or_update(stu);
     }
 
     /**
@@ -49,15 +46,6 @@ public class stuController {
     public Result search(@RequestBody Stu stu){
         log.info("查询学生: {}" , stu);
         return Result.success(stuService.search(stu));
-    }
-
-    /**
-     * 更新，post请求，body请求体，json格式
-     */
-    @PostMapping("/update")
-    public Result update(@RequestBody Stu stu){
-        log.info("更新学生: {}" , stu);
-        return stuService.update(stu);
     }
 
     /**

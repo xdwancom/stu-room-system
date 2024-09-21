@@ -1,5 +1,7 @@
 package com.springweb.service.impl;
-
+import org.apache.commons.lang3.StringUtils;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.springweb.mapper.stuMapper;
 import com.springweb.pojo.Result;
 import com.springweb.pojo.Room;
@@ -19,29 +21,21 @@ import java.util.UUID;
 @Slf4j
 @Service
 @Transactional(rollbackFor = Exception.class)//自动事务管理,默认只有RuntimeException异常才回滚，设置rollbackFor可指定何种异常回滚，此处设置为全部
-public class stuServiceImpl implements stuService {
+public class stuServiceImpl extends ServiceImpl<stuMapper,Stu> implements stuService {
     @Autowired//ioc容器管理，依赖注入
     private stuMapper stuMapper;
 
     /**
-     * 批量删除学生
+     * 新增/更新学生
      */
     @Override
-    public void deleteid(List<Integer> ids) {
-        stuMapper.deleteid(ids);
-    }
-
-    /**
-     * 新增学生
-     */
-    @Override
-    public Result add(Stu stu) {
-        if (stuMapper.checkbedcount(stu)<=stuMapper.checkpeoplecount(stu))//检查该宿舍是否满人
+    public Result add_or_update(Stu stu) {
+        QueryWrapper<Stu> wrapper = new QueryWrapper<Stu>()
+                .eq("roommsg", stu.getRoommsg())
+                .ne("id", stu.getId());
+        if (stuMapper.checkbedcount(stu)<=stuMapper.selectCount(wrapper))//检查该宿舍是否满人，若床位数≤宿舍除自己以外人数则满人
             return Result.error("countmax");
-        else if (stuMapper.id_count(stu.getId()))// 检查是否存在相同学号的学生信息
-            return Result.error("id_repeat");
-        stuMapper.insert(stu);
-        return Result.success();
+        return saveOrUpdate(stu)?Result.success():Result.error("更新失败");
     }
 
     /**
@@ -49,20 +43,18 @@ public class stuServiceImpl implements stuService {
      */
     @Override
     public List<Stu> search(Stu stu) {
-        stuMapper.create_table_room();//若不存在则新建宿舍表room
-        stuMapper.create_table_stu();//若不存在则新建学生表stu
-        return stuMapper.search(stu);
-    }
-
-    /**
-     * 更新学生
-     */
-    @Override
-    public Result update(Stu stu) {
-        if (stuMapper.checkbedcount(stu)<=stuMapper.checkpeoplecount(stu))//检查该宿舍是否满人
-            return Result.error("count max");
-        stuMapper.update(stu);
-        return Result.success();
+        return lambdaQuery()
+                .eq(stu.getUnit() != null, Stu::getUnit, stu.getUnit())
+                .eq(stu.getRoomid() != null, Stu::getRoomid, stu.getRoomid())
+                .eq(stu.getId()!= null, Stu::getId, stu.getId())
+                .eq(StringUtils.isNotBlank(stu.getName()), Stu::getName, stu.getName())
+                .eq(StringUtils.isNotBlank(stu.getGender()), Stu::getGender, stu.getGender())
+                .eq(stu.getAge() != null, Stu::getAge, stu.getAge())
+                .eq(StringUtils.isNotBlank(stu.getDepartment()), Stu::getDepartment, stu.getDepartment())
+                .eq(stu.getGrade() != null, Stu::getGrade, stu.getGrade())
+                .eq(stu.getPhone() != null, Stu::getPhone, stu.getPhone())
+                .eq(StringUtils.isNotBlank(stu.getRoommsg()), Stu::getRoommsg, stu.getRoommsg())
+                .list();
     }
 
     /**
@@ -70,12 +62,28 @@ public class stuServiceImpl implements stuService {
      */
     @Override
     public Result assign(String method) {
+        QueryWrapper<Stu> grade_mwrapper = new QueryWrapper<Stu>()
+                .eq("gender", "男")
+                .orderByAsc("grade","department","id");
+
+        QueryWrapper<Stu> grade_swrapper = new QueryWrapper<Stu>()
+            .eq("gender", "女")
+            .orderByAsc("grade","department","id");
+
+        QueryWrapper<Stu> dep_mwrapper = new QueryWrapper<Stu>()
+                .eq("gender", "男")
+                .orderByAsc("department","grade","id");
+
+        QueryWrapper<Stu> dep_swrapper = new QueryWrapper<Stu>()
+                .eq("gender", "女")
+                .orderByAsc("department","grade","id");
+
         if (method.equals("grade")) {
             log.info("按照年级优先分配宿舍");
-            return Result.success(assign(stuMapper.grade_mstulist()/*临时男表*/,stuMapper.grade_fstulist()/*临时女表*/));//分配宿舍后返回学生表
+            return Result.success(assign(stuMapper.selectList(grade_mwrapper)/*临时男表*/,stuMapper.selectList(grade_swrapper)/*临时女表*/));//分配宿舍后返回学生表
         }else if (method.equals("dep")){
             log.info("按照院系优先分配宿舍");
-            return Result.success(assign(stuMapper.dep_mstulist()/*临时男表*/,stuMapper.dep_fstulist()/*临时女表*/));//分配宿舍后返回学生表
+            return Result.success(assign(stuMapper.selectList(dep_mwrapper)/*临时男表*/,stuMapper.selectList(dep_swrapper)/*临时女表*/));//分配宿舍后返回学生表
         }
         return Result.error("assign fail：please check url");//容错处理
     }
@@ -114,13 +122,10 @@ public class stuServiceImpl implements stuService {
                 break;
         }
 
-        //将女表全添加到男表，此时男表为分配宿舍后的新学生表
-        mstu.addAll(fstu);
-
-        stuMapper.full_delete();//清空stu(旧学生)表
-        for(int i=0;i< mstu.size();i++)//将新学生表添加到stu表
-            stuMapper.insert(mstu.get(i));
-        return mstu;
+        stuMapper.delete(null);//清空stu(旧学生)表
+        saveBatch(mstu);//批量插入
+        saveBatch(fstu);
+        return list();
     }
 
     @Override

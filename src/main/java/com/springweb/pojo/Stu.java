@@ -1,5 +1,7 @@
 package com.springweb.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,6 +15,7 @@ import lombok.NoArgsConstructor;
 public class Stu {
     private Integer unit; //单元楼栋
     private Integer roomid; //宿舍号
+    @TableId (value = "id",type = IdType.AUTO)
     private Integer id; //学号
     private String name; //姓名
     private String gender; //性别

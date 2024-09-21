@@ -1,5 +1,6 @@
 package com.springweb.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,5 +17,6 @@ public class Room {
     private Integer floor; //楼层
     private Integer bedcount; //床位数
     private String money; //住宿费
+    @TableId(value = "roommsg")
     private String roommsg; //楼栋-宿舍号
 }

@@ -13,11 +13,15 @@ spring:
     web:
         resources:
             static-locations: classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/,file:${web.upload-path}
-#Mybatis配置
-mybatis:
+#Mybatis-plus配置
+mybatis-plus:
     configuration:
         log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
         map-underscore-to-camel-case: true
+        cache-enabled: false
+    global-config:
+      db-config:
+          update-strategy: not_null
 #spring事务管理日志
 logging:
     level:

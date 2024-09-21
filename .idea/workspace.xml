@@ -4,9 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="增加注册功能，8位随机字符串作为盐值，与明文密码组合并通过SHA256加密保存到数据库">
+    <list default="true" id="51ab2ff3-5d8a-4ca9-b53f-5ac58622be0f" name="变更" comment="优化注册逻辑">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_annotation_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_boot_starter_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_core_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_extension_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_baomidou_mybatis_plus_spring_boot_autoconfigure_3_5_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/springweb/service/impl/stuServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/f2660c45-e122-45c2-9f7f-3da97917a605.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_jsqlparser_jsqlparser_4_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_5_16.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_0_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_2_1_2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/accountServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/controller/stuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/controller/stuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/stuMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/mapper/stuMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Stu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/pojo/Stu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/stuServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/impl/stuServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/springweb/service/stuService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/springweb/service/stuService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/springweb/mapper/stuMapper.xml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +39,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -88,6 +108,8 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/SQL 方言" value="MySQL" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="database.data.extractors.current.export.id" value="Comma-separated (CSV)_id" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="jdk.selected.JAVA_MODULE" value="11" />
@@ -117,8 +139,14 @@
       <recent name="D:\.文件夹\xx\java" />
       <recent name="D:\.文件夹\xx\java\springweb4\src\main\resources\com\springweb4" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.springweb.service.impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.springweb.exception" />
@@ -181,17 +209,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TliasWebManagementApplicationTests.testUuid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="stuServiceImplTest.add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springweb" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value=".*" />
+          <option name="PATTERN" value="com.springweb.service.impl.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.itheima" />
-      <option name="MAIN_CLASS_NAME" value="com.itheima.TliasWebManagementApplicationTests" />
-      <option name="METHOD_NAME" value="testUuid" />
+      <option name="PACKAGE_NAME" value="com.springweb.service.impl" />
+      <option name="MAIN_CLASS_NAME" value="com.springweb.service.impl.stuServiceImplTest" />
+      <option name="METHOD_NAME" value="add" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -214,17 +242,17 @@
     <list>
       <item itemvalue="JUnit.Demo.testGenJwt" />
       <item itemvalue="JUnit.Demo.testParseJwt" />
-      <item itemvalue="JUnit.TliasWebManagementApplicationTests.testUuid" />
       <item itemvalue="Spring Boot.SpringwebApplication" />
       <item itemvalue="应用程序.Demo" />
+      <item itemvalue="JUnit.stuServiceImplTest.add" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.SpringwebApplication" />
+        <item itemvalue="JUnit.stuServiceImplTest.add" />
         <item itemvalue="JUnit.Demo.testParseJwt" />
         <item itemvalue="JUnit.Demo.testGenJwt" />
         <item itemvalue="应用程序.Demo" />
-        <item itemvalue="JUnit.TliasWebManagementApplicationTests.testUuid" />
       </list>
     </recent_temporary>
   </component>
@@ -324,7 +352,10 @@
       <workItem from="1726465742102" duration="2043000" />
       <workItem from="1726468407478" duration="446000" />
       <workItem from="1726542318029" duration="21000" />
-      <workItem from="1726579802964" duration="8468000" />
+      <workItem from="1726579802964" duration="8808000" />
+      <workItem from="1726591482482" duration="246000" />
+      <workItem from="1726809665630" duration="11840000" />
+      <workItem from="1726890846737" duration="11447000" />
     </task>
     <task id="LOCAL-00001" summary="1">
       <created>1725335762390</created>
@@ -494,7 +525,14 @@
       <option name="project" value="LOCAL" />
       <updated>1726587379935</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="优化注册逻辑">
+      <created>1726589870513</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1726589870513</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -557,7 +595,8 @@
     <MESSAGE value="sha256" />
     <MESSAGE value="细节优化" />
     <MESSAGE value="增加注册功能，8位随机字符串作为盐值，与明文密码组合并通过SHA256加密保存到数据库" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加注册功能，8位随机字符串作为盐值，与明文密码组合并通过SHA256加密保存到数据库" />
+    <MESSAGE value="优化注册逻辑" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化注册逻辑" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
