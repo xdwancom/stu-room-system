@@ -18,6 +18,7 @@ target/
 *.iml
 *.ipr
 .mvn
+.idea
 mvnw*
 
 ### NetBeans ###
